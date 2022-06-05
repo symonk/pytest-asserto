@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pytest-asserto"
+version = "0.1.0"
+description = "A pytest plugin for the asserto library"
+authors = ["symonk <jackofspaces@gmail.com>"]
+license = "Apache 2"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = "^7.1.2"
+asserto = "0.0.5a0"
+
+[tool.poetry.dev-dependencies]
+tox = "^3.25.0"
+pre-commit = "^2.19.0"
+
+[tool.poetry.plugins.entrypoint]
+pytest11 = "pytest-asserto.plugin"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
